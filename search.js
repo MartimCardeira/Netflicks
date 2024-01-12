@@ -10,6 +10,7 @@ async function parseInput(event) {
     if (queriedTitle === previousSearch || queriedTitle === "")
         return;
     previousSearch = queriedTitle;
+    //TODO: Deal with special characters in the URL
     searchForMovies(queriedTitle);
 }
 
@@ -22,6 +23,7 @@ async function searchForMovies(title) {
         return;
     }
     resultsContainer.innerHTML = '';
+    //TODO: Add the ability to show more than one page of results (Cap it at 100)
     showSearchResults(response.Search);
 }
 
