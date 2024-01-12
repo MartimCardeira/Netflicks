@@ -10,7 +10,6 @@ async function parseInput(event) {
     if (queriedTitle === previousSearch || queriedTitle === "")
         return;
     previousSearch = queriedTitle;
-    quereidTitle = queriedTitle.replace(" ", "+");
     //Encode special characters
     queriedTitle = queriedTitle.replace("$", "%24");
     queriedTitle = queriedTitle.replace("&", "%26");
@@ -36,6 +35,7 @@ async function parseInput(event) {
     queriedTitle = queriedTitle.replace("]", "%5D");
     queriedTitle = queriedTitle.replace("`", "%60");
     //End of encode
+    queriedTitle = queriedTitle.replace(/ /g, "+"); //replaces spaces with +, must be done after encoding
     searchForMovies(queriedTitle);
 }
 
