@@ -69,3 +69,7 @@ li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
     flex-direction: column;
     list-style-type: disc;
 }
+
+.menu-link{
+    text-decoration: none;
+}
