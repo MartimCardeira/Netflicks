@@ -24,7 +24,7 @@ async function parseInput(event) {
     queriedTitle = queriedTitle.replace("<", "%3C");
     queriedTitle = queriedTitle.replace(">", "%3E");
     queriedTitle = queriedTitle.replace("#", "%23");
-    //queriedTitle = queriedTitle.replace("%", "%25"); No one is going to search for a title with % in it anyways
+    //queriedTitle = queriedTitle.replace("%", "%25"); No one is going to search for a title with % in it anyways, this breaks shit
     queriedTitle = queriedTitle.replace("{", "%7B");
     queriedTitle = queriedTitle.replace("}", "%7D");
     queriedTitle = queriedTitle.replace("|", "%7C");
