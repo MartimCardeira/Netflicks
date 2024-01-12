@@ -21,18 +21,19 @@ async function searchForMovies(title) {
         alert(response.Error);
         return;
     }
+    resultsContainer.innerHTML = '';
     showSearchResults(response.Search);
 }
 
 function showSearchResults(searchResults) {
     for (let movie of searchResults) {
         let movieResult = document.createElement("section");
-        movieResult.class = "movie";
+        movieResult.className = "movie";
         let moviePoster = document.createElement("img");
-        moviePoster.class = "movie-poster";
+        moviePoster.className = "movie-poster";
         moviePoster.src = movie.Poster;
         let movieTitle = document.createElement("h2");
-        movieTitle.class = "movie-title";
+        movieTitle.className = "movie-title";
         movieTitle.appendChild(document.createTextNode(movie.Title));
         movieResult.appendChild(moviePoster);
         movieResult.appendChild(movieTitle);
