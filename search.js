@@ -10,7 +10,32 @@ async function parseInput(event) {
     if (queriedTitle === previousSearch || queriedTitle === "")
         return;
     previousSearch = queriedTitle;
-    //TODO: Deal with special characters in the URL
+    queriedTitle.replace(" ", "+");
+    //Encode special characters
+    queriedTitle.replace("$", "%24");
+    queriedTitle.replace("&", "%26");
+    queriedTitle.replace("+", "%2B");
+    queriedTitle.replace(",", "%2C");
+    queriedTitle.replace("/", "%2F");
+    queriedTitle.replace(":", "%3A");
+    queriedTitle.replace(";", "%3B");
+    queriedTitle.replace("=", "%3D");
+    queriedTitle.replace("?", "%3F");
+    queriedTitle.replace("@", "%40");
+    queriedTitle.replace("<", "%3C");
+    queriedTitle.replace(">", "%3E");
+    queriedTitle.replace("#", "%23");
+    queriedTitle.replace("%", "%25");
+    queriedTitle.replace("{", "%7B");
+    queriedTitle.replace("}", "%7D");
+    queriedTitle.replace("|", "%7C");
+    queriedTitle.replace("\\", "%5C");  //double backslash because escape character is necessary here
+    queriedTitle.replace("^", "%5E");
+    queriedTitle.replace("~", "%7E");
+    queriedTitle.replace("[", "%5B");
+    queriedTitle.replace("]", "%5D");
+    queriedTitle.replace("`", "%60");
+    //End of encode
     searchForMovies(queriedTitle);
 }
 
