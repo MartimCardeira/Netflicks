@@ -1,1 +1,8 @@
+@font-face {
+    font-family: Lexend;
+    src: url(Lexend-VariableFont_wght.ttf);
+}
 
+#navigationList {display: inline-block};
+h1{color: black; text-align: center;}
+* {font-family: Lexend, sans-serif;}
