@@ -3,6 +3,37 @@
     src: url(Lexend-VariableFont_wght.ttf);
 }
 
-#navigationList {display: inline-block};
-h1{color: black; text-align: center;}
+li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
+.heading{text-align: center; color: black; font-size: 50px}
+
+.form-heading{
+    text-align: center; color: rgb(87, 87, 87); font-size: 30px; font-weight: 100; padding: 1%;
+}
+.credentials{display: block; padding: 1%;}
 * {font-family: Lexend, sans-serif;}
+#formmy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+#submit-button{
+    display: inline-block; 
+    margin: 2%; 
+    align-self: center; 
+    text-align: center; 
+    width: 12%;
+    background-color: black;
+    color: white;
+    height: 25px;
+    font-family: Lexend, sans-serif;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(160, 170, 173);
+}
+.inputbox{
+    border-radius: 5px;
+    border: black;
+    border-width: 1px;
+    background-color:#e3e1e1;
+    box-shadow: 5px 5px 5px rgb(160, 170, 173);
+}
