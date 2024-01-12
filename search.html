@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netflicks</title>
@@ -10,16 +11,16 @@
   <header class="header">
     <nav class="main_navigation">
       <ul class="menu">
-        <li><a href="search.html" title="Search">Search</a></li>
-        <li><a href="pricing.html" title="Pricing">Pricing</a></li>
-        <li><button type="button" title="Sign Out">Sign Out</button></li>
+        <li><a href="search.html" title="Search" class ="menu-link">Search</a></li>
+        <li><a href="pricing.html" title="Pricing" class ="menu-link">Pricing</a></li>
+        <li><button type="button" title="Sign Out" id="sign-out-button">Sign Out</button></li>
       </ul>
     </nav>
     <h1 class="heading">Netflicks</h1>
   </header>
-  <form>
+  <form id="searchform">
     <label class="search-box" for="title-query">
-        Search movies...   
+        Search movies...    
       <input id="title-query" type="search" />
     </label>
     <button type="submit" formmethod="get" id="button">Search</button>

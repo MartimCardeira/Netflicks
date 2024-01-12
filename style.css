@@ -58,6 +58,7 @@ li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
     background-color:#e3e1e1;
     box-shadow: 5px 5px 5px rgb(160, 170, 173);
     padding: 1%;
+    width: 20%;
 }
 
 .plan-name{
@@ -67,9 +68,35 @@ li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
 .plan-description{
     display: flex;
     flex-direction: column;
-    list-style-type: disc;
+    list-style: circle;
 }
 
 .menu-link{
     text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+#sign-out-button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: Lexend, sans-serif;
+    font-size: 15px;
+}
+
+#searchform{
+    display: flex;
+    justify-content: center;
+}
+
+.search-box{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#title-query{
+    padding-left: 10px;
+    padding-right: 10px;
 }
