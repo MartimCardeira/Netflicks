@@ -4,12 +4,21 @@
 }
 
 li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
-.heading{text-align: center; color: black; font-size: 50px}
+.heading{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: black;
+    font-size: 5vw;
+}
 
 .form-heading{
-    text-align: center; color: rgb(87, 87, 87); font-size: 30px; font-weight: 200; padding: 1%;
+    text-align: center; color: rgb(87, 87, 87); font-size: 3vw; font-weight: 200;
 }
-.credentials{display: block; padding: 1%;}
+.credentials{
+    display: block;
+    padding: 1%;
+}
 * {font-family: Lexend, sans-serif;}
 #formmy{
     display: flex;
@@ -17,48 +26,45 @@ li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
     align-items: center;
 } 
 #submit-button{
-    display: inline-block; 
-    margin: 2%; 
+    /*display: inline-block; */
+    margin: 1%; 
     align-self: center; 
-    text-align: center; 
+    text-align: center;
     width: 12%;
     background-color: black;
     color: white;
-    height: 25px;
+    height: 3vw;
     font-family: Lexend, sans-serif;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 5px 5px 5px rgb(160, 170, 173);
+    border-radius: 1vw;
+    border-width: 0.25vw;
+    box-shadow: 0.25vw 0.25vw 0.25vw rgb(160, 170, 173);
+    border-color: rgb(87, 87, 87);
 }
 .inputbox{
-    border-radius: 5px;
-    border: black;
-    border-width: 1px;
+    border-radius: 1vw;
+    border: none;
     background-color:#e3e1e1;
-    box-shadow: 5px 5px 5px rgb(160, 170, 173);
+    box-shadow: 0.25vw 0.25vw 0.25vw rgb(160, 170, 173);
 }
 
 .plans{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-self: center;
     justify-content: center;
 }
 
 .plan{
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     border: black;
-    border-width: 1px;
-    border-radius: 5px;
+    border-width: 1vw;
+    border-radius: 1vw;
     background-color:#e3e1e1;
-    box-shadow: 5px 5px 5px rgb(160, 170, 173);
+    box-shadow: 1vw 1vw 1vw rgb(160, 170, 173);
     padding: 1%;
-    width: 20%;
+    width: 30%;
 }
 
 .plan-name{
@@ -68,13 +74,27 @@ li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
 .plan-description{
     display: flex;
     flex-direction: column;
-    list-style: circle;
+    padding-left: 20%;
+}
+
+.plan-bullet{
+    display: list-item;
+}
+
+.plan-button{
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    border-width: 0.25vw;
+    border-radius: 0.25vw;
+    box-shadow: 0.25vw 0.25vw 0.25vw rgb(160, 170, 173);
+    border-color: rgb(87, 87, 87);
 }
 
 .menu-link{
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 2.25vw;
 }
 
 #sign-out-button{
@@ -83,18 +103,43 @@ li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
     padding: 0;
     cursor: pointer;
     font-family: Lexend, sans-serif;
-    font-size: 15px;
+    font-size: 2.25vw;
 }
 
 #searchform{
     display: flex;
     justify-content: center;
+    color:rgb(87, 87, 87);
+    font-size: 120%;
+    padding: 2vw;
+}
+
+.search-box{
+    align-self: center;
 }
 
 
 #title-query{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border-radius: 1vw;
+    font-size: 120%;
+    border: none;
+    background-color:#e3e1e1;
+    box-shadow: 0.25vw 0.25vw 0.25vw rgb(160, 170, 173);
+}
+
+#button{
+    background-color: black;
+    color: white;
+    margin-left: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 80%;
+    border-width: 0.25vw;
+    border-radius: 0.25vw;
+    box-shadow: 0.25vw 0.25vw 0.25vw rgb(160, 170, 173);
+    border-color: rgb(87, 87, 87);
 }
 
 .search-results{
@@ -102,21 +147,30 @@ li{display: inline-block; padding-right: 2%; padding-left: 2%; margin-top: 1%;}
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: none;
+    border: none;
+    margin: none;
 }
 
+
+
 .movie{
-    padding: 1%;
-    width: 300px
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    border: none;
+    margin: none;
+    width: 16vw;
+    
 }
 
 .movie-poster{
-    width: 300px;
-    height: 440px;
-    box-shadow: 5px 5px 5px rgb(160, 170, 173);
+    height: 24vw;
+    box-shadow: 0.25vw 0.25vw 0.25vw rgb(160, 170, 173);
 }
 
 .movie-title{
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: 400;
     text-align: center;
 }
