@@ -43,11 +43,11 @@ async function searchForMovies(title) {
     let url = "http://www.omdbapi.com/?apikey=2253932&s=" + title;
     let promise = await fetch(url);
     let response = await promise.json();
+    resultsContainer.innerHTML = '';
     if (response.Response == "False") {
-        alert(response.Error);
+        showError(response.Error);
         return;
     }
-    resultsContainer.innerHTML = '';
     showSearchResults(response.Search);
     let totalResults = response.totalResults;
     for (let i = 2; (i - 1) * 10 < Math.min(60, totalResults); i++) {
@@ -55,6 +55,13 @@ async function searchForMovies(title) {
         response = await promise.json();
         showSearchResults(response.Search);
     }
+}
+
+function showError(error) {
+    let errorMsg = document.createElement("p");
+    errorMsg.className = "error-message";
+    errorMsg.appendChild(document.createTextNode(error));
+    resultsContainer.appendChild(errorMsg);
 }
 
 function showSearchResults(searchResults) {
