@@ -3,7 +3,7 @@ const resultsContainer = document.getElementById("results-container");
 searchButton.addEventListener("click", parseInput);
 let previousSearch = "";
 
-async function parseInput(event) {
+function parseInput(event) {
     event.preventDefault();
     let queriedTitle = document.getElementById("title-query").value;
     queriedTitle = queriedTitle.trim();
@@ -48,8 +48,13 @@ async function searchForMovies(title) {
         return;
     }
     resultsContainer.innerHTML = '';
-    //TODO: Add the ability to show more than one page of results (Cap it at 100)
     showSearchResults(response.Search);
+    let totalResults = response.totalResults;
+    for (let i = 2; (i - 1) * 10 < Math.min(60, totalResults); i++) {
+        promise = await fetch(url + "&page=" + i);
+        response = await promise.json();
+        showSearchResults(response.Search);
+    }
 }
 
 function showSearchResults(searchResults) {
